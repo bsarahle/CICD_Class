@@ -16,11 +16,11 @@ jobs:
           world: hello world
         run: echo ${{ env.world}}
         shell: bash
-  #goodbye:
-    #runs-on: ubuntu-latest
-    #steps:
-      #- name: goodbye world
-    #env:
-      #bye: goodbye world
-      #run: echo ${{ env.bye}}
-      #shell: bash
+  goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: goodbye world
+        env:
+          bye: goodbye world
+        run: echo ${{ env.bye}}
+        shell: bash
