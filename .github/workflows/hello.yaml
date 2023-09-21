@@ -12,10 +12,10 @@ jobs:
     env:
       world: hello world
     steps:
-      - uses: actions/checkout@v2
-      - name: hello world
-      run: echo ${{ env.world}}
-      shell: bash
+    - uses: actions/checkout@v2
+    - name: hello world
+    run: echo ${{ env.world}}
+    shell: bash
   #goodbye:
     #runs-on: ubuntu-latest
     #steps:
