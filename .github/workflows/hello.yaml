@@ -10,10 +10,12 @@ on:
 jobs:
   hello:
     runs-on: ubuntu-latest
+    env:
+      greet: hello world
     steps:
     - uses: actions/checkout@v2
     - name: hello world
-      run: echo "Hello world"
+      run: echo ${{ env.greet}}
       shell: bash
   goodbye:
     runs-on: ubuntu-latest
