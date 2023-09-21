@@ -9,18 +9,18 @@ on:
 jobs:
   hello:
     runs-on: ubuntu-latest
-      steps:
-      - uses: actions/checkout@v2
-      - name: hello world
-      env:
-        world: hello world
+    steps:
+    - uses: actions/checkout@v2
+    - name: hello world
+    env:
+      world: hello world
       run: echo ${{ env.world}}
       shell: bash
   goodbye:
     runs-on: ubuntu-latest
-       steps:
-        env:
-          bye: goodbye world
+    steps:
       - name: goodbye world
-        run: echo ${{ env.bye}}
-        shell: bash
+    env:
+      bye: goodbye world
+      run: echo ${{ env.bye}}
+      shell: bash
