@@ -1,7 +1,3 @@
-env:
-  greet1: hello world
-  greet2: goodbye world
-name: Hello world workflow
 on:
   push:
     branches:
@@ -13,16 +9,18 @@ on:
 jobs:
   hello:
     runs-on: ubuntu-latest
-    #env:
-      #greet: hello world
+    env:
+      hello: hello world
     steps:
     - uses: actions/checkout@v2
     - name: hello world
-      run: echo ${{ env.greet1}}
+      run: echo ${{ env.greet}}
       shell: bash
   goodbye:
     runs-on: ubuntu-latest
+    env:
+      bye: goodbye world
     steps:
       - name: goodbye world
-        run: echo ${{ env.greet2}}
+        run: echo ${{ env.bye}}
         shell: bash
