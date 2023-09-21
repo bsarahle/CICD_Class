@@ -10,8 +10,8 @@ jobs:
   hello:
     runs-on: ubuntu-latest
       steps:
-      env:
-        world: hello world
+        env:
+          world: hello world
       - uses: actions/checkout@v2
       - name: hello world
       run: echo ${{ env.world}}
